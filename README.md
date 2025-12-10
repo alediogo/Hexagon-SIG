@@ -1,41 +1,56 @@
-# Desafio de BI: Dashboard de Vendas AdventureWorks
+<div align="center">
 
-Este projeto é uma solução para o Teste de Habilidade (BI) da Hexagon.
-O objetivo foi criar um dashboard interativo com Streamlit, consumindo dados da base AdventureWorks via SQL Server.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Business Intelligence](https://img.shields.io/badge/Business%20Intelligence-Dashboard-success?style=for-the-badge)
 
-O dashboard exibe:
-* KPI de Vendas Totais no período filtrado.
-* Gráfico de barras com as vendas por produto.
-* Gráfico de linhas com as vendas ao longo do tempo.
-* Filtros interativos por Região, Produto e Ano.
+</div>
 
----
+# 📊 Dashboard de Vendas AdventureWorks
 
+Uma solução de **Business Intelligence as Code** (BI como Código). Este projeto substitui ferramentas de BI tradicionais por uma aplicação web ágil em Python, conectando-se diretamente ao Data Warehouse para gerar insights em tempo real.
 
-## 🚀 Como Rodar o Projeto
+O dashboard consome dados da base pública **AdventureWorks** via SQL Server e apresenta KPIs de vendas, análise de produtos e tendências temporais.
 
-### Pré-requisitos
+## 🎯 Objetivo do Projeto
 
-* **Python 3.11+**
-* **SQL Server** (com a base AdventureWorks restaurada).
-    * *Nota: O script de conexão (`app.py`) precisará ser ajustado com as credenciais (Servidor e Driver) do seu banco de dados local.*
+Demonstrar a capacidade de construir pipelines de análise ponta-a-ponta:
+1.  **Extração:** Conexão segura com banco de dados corporativo (**SQL Server**).
+2.  **Processamento:** Manipulação de Dataframes com **Pandas**.
+3.  **Visualização:** Criação de interface interativa e filtros dinâmicos com **Streamlit**.
 
-### Passos para Execução
+## 🛠 Tech Stack
 
-1.  **Clone este repositório:**
-    ```bash
-    git clone [https://github.com/alediogo/Hexagon-SIG.git](https://github.com/alediogo/Hexagon-SIG.git)
-    cd Hexagon-SIG
-    ```
+* **Frontend/UI:** Streamlit (Python)
+* **Database:** Microsoft SQL Server (Base AdventureWorks2019)
+* **Conector:** PyODBC
+* **Análise de Dados:** Pandas & Plotly (Visualizações)
 
-2.  **Instale as dependências:**
+## 🚀 Funcionalidades
+
+* **KPIs em Tempo Real:** Vendas Totais, Margem Média e Volume de Pedidos.
+* **Filtros Dinâmicos:** Barra lateral para filtrar por Ano, Região e Categoria de Produto (impacta todos os gráficos).
+* **Visualizações:**
+    * Gráfico de Barras: Top Produtos mais vendidos.
+    * Gráfico de Linhas: Evolução temporal das vendas.
+* **Tabelas:** Visualização detalhada dos dados brutos filtrados.
+
+## 📦 Como Executar Localmente
+
+1.  Clone o repositório.
+2.  Instale as dependências:
     ```bash
     pip install -r requirements.txt
     ```
-
-3.  **Execute o dashboard:**
+3.  Configure a string de conexão no arquivo `app.py` ou `.env` para apontar para seu SQL Server local.
+4.  Rode a aplicação:
     ```bash
     streamlit run app.py
     ```
+5.  O dashboard abrirá automaticamente no seu navegador (http://localhost:8501).
 
-4.  O dashboard abrirá automaticamente no seu navegador.
+## 🖼️ Preview
+
+![Dashboard funcionando](./desafio/athena_query.png)
