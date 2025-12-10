@@ -53,4 +53,4 @@ Demonstrar a capacidade de construir pipelines de análise ponta-a-ponta:
 
 ## 🖼️ Preview
 
-![Dashboard funcionando](./desafio/athena_query.png)
+![Dashboard funcionando](/1762973924901.jpeg)
