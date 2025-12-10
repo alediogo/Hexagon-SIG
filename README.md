@@ -53,4 +53,4 @@ Demonstrar a capacidade de construir pipelines de análise ponta-a-ponta:
 
 ## 🖼️ Preview
 
-![Dashboard funcionando](/1762973924901.jpeg)
+![Dashboard funcionando](desafio/img/1762973924901.jpeg)
