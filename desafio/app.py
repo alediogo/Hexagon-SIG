@@ -3,9 +3,7 @@ import pandas as pd
 import pyodbc
 import plotly.express as px
 
-# -------------------------------------------------------------------
-# TAREFA 1: CONEXÃO E CONSULTA
-# -------------------------------------------------------------------
+# CONEXÃO E CONSULTA
 
 # Usa o cache do Streamlit para rodar a consulta SÓ UMA VEZ
 @st.cache_data
@@ -45,7 +43,6 @@ def load_data():
         df = pd.read_sql_query(query, cnxn)
         cnxn.close()
         
-        # TAREFA 2: Manipulação de Dados (Pandas)
         df['OrderDate'] = pd.to_datetime(df['OrderDate'])
         # Extração Ano e Mês para os filtros/gráficos
         df['Ano'] = df['OrderDate'].dt.year
@@ -63,9 +60,6 @@ df = load_data()
 if df is None:
     st.error("Erro ao carregar os dados do banco. Verifique o terminal.")
 else:
-    # -------------------------------------------------------------------
-    # TAREFA 3 e 4: DASHBOARD STREAMLIT
-    # -------------------------------------------------------------------
 
     st.set_page_config(layout="wide") # Deixa o dashboard mais largo
     st.title("Dashboard de Vendas - AdventureWorks 📈")
@@ -108,7 +102,6 @@ else:
 
     st.divider() # Linha divisória
 
-    # --- GRÁFICOS (TAREFA 3) ---
     
     # 1. Gráfico de Barras: Vendas por Produto
     st.header("Top 10 Produtos por Venda")
